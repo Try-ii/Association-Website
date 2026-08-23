@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مجلس الإدارة | بوابة الحوكمة والشفافية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header"><div class="container navbar"><a class="brand" href="index.html" aria-label="بوابة الحوكمة والشفافية">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 7v6c0 5 3.5 7.5 8 8 4.5-.5 8-3 8-8V7l-8-4Z"/><path d="m9 12 2 2 4-5"/></svg>
+        </span>
+        <span>بوابة الحوكمة</span>
+      </a><nav class="nav-links"><a href="index.html">الرئيسية</a><a href="#content" aria-current="page">مجلس الإدارة</a></nav></div></header>
+  <main>
+    <section class="hero detail-hero"><div class="container hero-content"><p class="eyebrow">بوابة الحوكمة والشفافية</p><h1>مجلس الإدارة</h1><p>بيانات الرئيس والأعضاء ومحاضر المجلس وخطاب التشكيل.</p><div class="hero-actions"><a class="button secondary" href="index.html">الرئيسية</a></div></div></section>
+    <section class="section" id="content"><div class="container section-stack">
+        <article class="portal-section detail-panel" id="board" data-governance-section="board">
+                  <div class="portal-section-head">
+                    <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+                    <div><h2>مجلس الإدارة</h2><p>بيانات الرئيس والأعضاء ومحاضر المجلس وخطاب التشكيل.</p></div>
+                  </div>
+                  <div class="leadership-layout">
+                    <aside class="person-card">
+                      <img src="../assets/images/chairman-photo.jpg" alt="عصام عادل محمد عصابي">
+                      <div><span>رئيس مجلس الإدارة</span><h3>عصام عادل محمد عصابي</h3><p>eossabi@gmail.com</p><p>0580008494</p></div>
+                    </aside>
+                    <div class="member-panel">
+                      <h3>الأعضاء المؤسسون</h3>
+                      <div class="member-list">
+                        <span>طلال فهد علي الشريف</span>
+                        <span>عبدالرحمن بن أحمد شوكت زاهد</span>
+                        <span>عصام عادل عصابي</span>
+                        <span>أحمد هديب الحربي</span>
+                        <span>محمد عتيق الحربي</span>
+                        <span>سلطان منصور الحربي</span>
+                        <span>محمد عبدالله المحمدي</span>
+                        <span>نايف فوزي المحمدي</span>
+                        <span>ماجد محيل المطيري</span>
+                        <span>عبدالله خالد الضبيعي</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="document-card-grid">
+                    <a class="document-card" data-category="board" href="../assets/pdf/خطاب تشكيل المجلس.pdf" download><span class="pdf-badge">PDF</span><h3>خطاب تشكيل المجلس</h3><p>خطاب تشكيل مجلس الإدارة.</p></a>
+                    <a class="document-card" data-category="board" href="../assets/pdf/محضر مجلس الإدارة رقم (1) (1).pdf" download><span class="pdf-badge">PDF</span><h3>محضر مجلس الإدارة رقم (1)</h3><p>محضر مجلس الإدارة الأول.</p></a>
+                    <a class="document-card" data-category="board" href="../assets/pdf/محضر مجلس الإدارة رقم (2) _merged.pdf" download><span class="pdf-badge">PDF</span><h3>محضر مجلس الإدارة رقم (2)</h3><p>محضر مجلس الإدارة الثاني.</p></a>
+                    <a class="document-card" data-category="board" href="../assets/pdf/محضر مجلس الإدارة رقم (3)_signed.pdf" download><span class="pdf-badge">PDF</span><h3>محضر مجلس الإدارة رقم (3)</h3><p>محضر مجلس الإدارة الثالث.</p></a>
+                    <a class="document-card" data-category="board" href="../assets/pdf/محضر مجلس الإدارة رقم (4) (1)_signed.pdf" download><span class="pdf-badge">PDF</span><h3>محضر مجلس الإدارة رقم (4)</h3><p>محضر مجلس الإدارة الرابع.</p></a>
+                    <a class="document-card" data-category="board" href="../assets/pdf/قرار_تعيين_مراجع_داخلي_للجمعية_2_1.pdf" download><span class="pdf-badge">PDF</span><h3>قرار تعيين مراجع داخلي</h3><p>قرار تعيين المراجع الداخلي للجمعية.</p></a>
+                  </div>
+                </article>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><p class="copyright">بوابة الحوكمة والشفافية</p><a href="index.html">الرئيسية</a></div></div></footer>
+</body>
+</html>

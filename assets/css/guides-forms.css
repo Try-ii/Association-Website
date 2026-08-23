@@ -1,0 +1,101 @@
+/* Guides & Forms additions. Core visual system is reused from assets/css/style.css */
+
+.portal-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.portal-card {
+  min-height: 340px;
+}
+
+.search-panel {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.search-box {
+  width: min(100%, 640px);
+  min-height: 52px;
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  background: var(--background);
+  box-shadow: var(--shadow-sm);
+  font: inherit;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.search-box:focus {
+  border-color: rgba(98, 209, 188, 0.7);
+  box-shadow: 0 0 0 4px rgba(98, 209, 188, 0.14);
+}
+
+.placeholder-badge {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 14px;
+  padding: 6px 12px;
+  border: 1px dashed rgba(39, 47, 110, 0.24);
+  border-radius: 999px;
+  color: var(--primary);
+  background: rgba(98, 209, 188, 0.1);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.button[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.pagination a,
+.pagination span {
+  display: grid;
+  min-width: 42px;
+  height: 42px;
+  place-items: center;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--secondary-text);
+  background: var(--background);
+  font-weight: 800;
+}
+
+.pagination span,
+.pagination a:hover {
+  color: var(--background);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.no-results {
+  display: none;
+  margin-top: 18px;
+}
+
+.no-results.is-visible {
+  display: block;
+}
+
+@media (max-width: 1180px) {
+  .portal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+}

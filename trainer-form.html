@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>استقطاب مدربين ومستشارين</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#272f6e; --mint:#62d1bc; --line:#e4eaf2; --muted:#667085; } * { box-sizing:border-box; } body { margin:0; font-family:Cairo,Arial,sans-serif; color:#1f2937; background:#f7f9fc; }
+    .page { width:min(100% - 32px,780px); margin:48px auto; padding:34px; background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:0 16px 42px rgba(39,47,110,.1); } .back { display:inline-flex; gap:7px; color:var(--navy); font-size:.9rem; font-weight:700; text-decoration:none; }
+    h1 { margin:20px 0 4px; color:var(--navy); font-size:1.55rem; } .intro { margin:0 0 26px; color:var(--muted); font-size:.92rem; } .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; } .field { display:flex; flex-direction:column; gap:6px; } .wide { grid-column:1/-1; }
+    label { color:var(--navy); font-size:.86rem; font-weight:700; } .required { color:#d9534f; } input,select,textarea { width:100%; padding:11px 12px; border:1px solid var(--line); border-radius:7px; color:#1f2937; font:inherit; font-size:.88rem; } textarea { min-height:100px; resize:vertical; } input:focus,select:focus,textarea:focus { outline:none; border-color:var(--mint); box-shadow:0 0 0 3px rgba(98,209,188,.18); }
+    .upload { padding:14px; border:1.5px dashed var(--line); border-radius:7px; background:#fafcff; } button { width:100%; margin-top:24px; padding:12px; border:0; border-radius:7px; color:#fff; background:#58c7b3; font:inherit; font-weight:800; cursor:pointer; } .success { display:none; margin-top:18px; padding:13px; border-radius:8px; color:#146c5b; background:#e9faf5; text-align:center; font-weight:700; }
+    @media (max-width:600px) { .page { width:min(100% - 20px,780px); margin:18px auto; padding:24px 18px; } .grid { grid-template-columns:1fr; } .wide { grid-column:auto; } }
+  </style>
+</head>
+<span class="brand-mark">
+<img src="assets/images/log.jpg" alt="شعار الجمعية" style="width: 50px; height:60px; object-fit: contain;margin-left:20px;">   </span> 
+
+جمعية رواد اعمال المدينة |رياديون 
+<body>
+  <main class="page">
+    <a class="back" href="index.html">← رجوع لخيارات الانضمام</a>
+    <h1>استقطاب مدربين ومستشارين</h1>
+    <p class="intro">سجّل بياناتك للانضمام إلى قاعدة المدربين والمستشارين لدى الجمعية.</p>
+    <form id="trainerForm">
+      <div class="grid">
+        <div class="field"><label for="name">الاسم الكامل <span class="required">*</span></label><input id="name" name="name" required></div>
+        <div class="field"><label for="email">البريد الإلكتروني <span class="required">*</span></label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="phone">رقم الجوال <span class="required">*</span></label><input id="phone" name="phone" type="tel" required></div>
+        <div class="field"><label for="city">المدينة</label><input id="city" name="city"></div>
+        <div class="field"><label for="specialty">التخصص <span class="required">*</span></label><input id="specialty" name="specialty" required></div>
+        <div class="field"><label for="years">سنوات الخبرة</label><input id="years" name="years" type="number" min="0"></div>
+        <div class="field wide"><label for="fields">المجالات التي يمكنك تقديمها <span class="required">*</span></label><select id="fields" name="fields" required><option value="">اختر المجال</option><option>ريادة الأعمال</option><option>التسويق والمبيعات</option><option>الإدارة المالية</option><option>الابتكار والذكاء الاصطناعي</option><option>تطوير نماذج الأعمال</option><option>القيادة وإدارة الفرق</option></select></div>
+        <div class="field wide"><label for="bio">نبذة عن الخبرات أو الدورات المقدمة</label><textarea id="bio" name="bio" placeholder="اكتب نبذة عن خبراتك ذات الصلة"></textarea></div>
+        <div class="field wide"><label for="license">رخصة المدرب أو السيرة الذاتية</label><input class="upload" id="license" name="license" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"></div>
+      </div>
+      <button type="submit">إرسال الطلب</button>
+      <div class="success" id="success">شكراً لك، تم استلام طلبك بنجاح.</div>
+    </form>
+  </main>
+  <script>document.getElementById('trainerForm').addEventListener('submit', function (event) { event.preventDefault(); document.getElementById('success').style.display = 'block'; });</script>
+</body>
+</html>

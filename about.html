@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>من نحن | جمعية رواد أعمال المدينة المنورة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary:#272f6e; --secondary:#62d1bc; --background:#fff; --soft:#f7f9fc; --border:#e8edf5; --text:#1f2937; --muted:#6b7280; --shadow:0 18px 44px rgba(39,47,110,.1); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--text); background:var(--background); font-family:Cairo,Arial,sans-serif; line-height:1.85; }
+    .container { width:min(100% - 40px,1180px); margin-inline:auto; }
+    .site-header { position:sticky; top:0; z-index:5; border-bottom:1px solid var(--border); background:rgba(255,255,255,.93); backdrop-filter:blur(16px); }
+    .navbar { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { color:var(--primary); font-size:1rem; font-weight:800; }
+    .brand::before { content:""; display:inline-block; width:10px; height:10px; margin-inline-end:9px; border-radius:50%; background:var(--secondary); }
+    nav { display:flex; gap:7px; color:var(--muted); font-size:.92rem; }
+    nav a { padding:9px 13px; border-radius:999px; color:inherit; text-decoration:none; } nav a:hover,nav a[aria-current="page"] { color:var(--primary); background:var(--soft); }
+    .hero { padding:74px 0 66px; overflow:hidden; border-bottom:1px solid var(--border); background:radial-gradient(circle at 18% 15%,rgba(98,209,188,.18),transparent 28%),linear-gradient(180deg,var(--soft),#fff); }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; margin:0 0 16px; padding:6px 13px; border:1px solid var(--border); border-radius:999px; color:var(--primary); background:#fff; font-size:.86rem; font-weight:800; }
+    .eyebrow::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--secondary); }
+    h1 { max-width:720px; margin:0; color:var(--primary); font-size:clamp(2.1rem,5vw,4rem); line-height:1.2; }
+    .hero p { max-width:670px; margin:18px 0 0; color:var(--muted); font-size:1.06rem; }
+    section { padding:76px 0; }
+    .section-heading { margin-bottom:28px; } h2 { margin:0; color:var(--primary); font-size:clamp(1.55rem,3vw,2.2rem); line-height:1.35; } .section-heading p { max-width:680px; margin:8px 0 0; color:var(--muted); }
+    .about-card { display:grid; grid-template-columns:.9fr 1.1fr; align-items:center; gap:48px; padding:32px; border:1px solid var(--border); border-radius:20px; background:#fff; box-shadow:var(--shadow); }
+    .about-photo { min-height:332px; border-radius:14px; background:url('about-us-assets/entrepreneurship-event.png') center/cover no-repeat; box-shadow:0 8px 24px rgba(39,47,110,.12); }
+    .about-text h2 { font-size:1.5rem; } .accent { width:62px; height:3px; margin:14px 0 20px; background:var(--secondary); } .about-text p { margin:0 0 14px; color:var(--muted); } .about-text strong { color:var(--primary); }
+    .goals-section { background:var(--soft); border-block:1px solid var(--border); }
+    .goals { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; counter-reset:goal; }
+    .goal { position:relative; min-height:180px; padding:24px 18px 18px; overflow:hidden; border:1px solid var(--border); border-radius:16px; background:#fff; box-shadow:0 9px 24px rgba(39,47,110,.05); transition:transform 220ms ease,box-shadow 220ms ease; }
+    .goal:hover { transform:translateY(-5px); box-shadow:var(--shadow); } .goal-icon { display:grid; width:40px; height:40px; margin-bottom:18px; place-items:center; border-radius:12px; color:var(--primary); background:rgba(98,209,188,.18); font-weight:800; } .goal-icon::before { counter-increment:goal; content:"0" counter(goal); } .goal-icon { font-size:0; } .goal p { margin:0; font-size:.91rem; line-height:1.85; }
+    #impact { position:relative; overflow:hidden; color:#iff; background:linear-gradient(160deg, var(--primary) 0%, var(--secondary) 150%);,url('about-us-assets/entrepreneurship-event.png') center/cover; } #impact::before { content:""; position:absolute; inset:auto -8% -160px auto; width:440px; height:440px; border:1px solid rgba(98,209,188,.28); border-radius:50%; } #impact > .container { position:relative; }
+    .impact-wrap { display:grid; grid-template-columns:.78fr 1.22fr; gap:36px; align-items:start; }.impact-intro { padding:12px 0; } .impact-intro h2 { color:#fff; } .impact-intro p { margin:12px 0 0; color:rgba(255,255,255,55); }
+    .impact-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .impact { display:flex; gap:13px; align-items:flex-start; padding:17px; border:1px solid rgba(255,255,255,.2); border-radius:12px; background:rgba(20,25,05,.200); backdrop-filter:none(6px); } .impact span { color:var(--secondary); font-weight:800; font-size:1.1rem; } .impact p { margin:0; color:#fff; font-size:.9rem; }
+    /* رأس وتذييل الصفحة الرئيسية */
+    .site-header { position:sticky; top:0; z-index:20; border-bottom:1px solid rgba(232,237,245,.9); background:rgba(255,255,255,.92); backdrop-filter:blur(18px); } .navbar { min-height:78px; } .brand { display:inline-flex; align-items:center; gap:12px; color:var(--primary); font-weight:800; text-decoration:none; } .brand::before { display:none; } .brand-mark { display:grid; width:42px; height:42px; place-items:center; border:1px solid var(--border); border-radius:13px; color:var(--primary); background:linear-gradient(135deg,rgba(98,209,188,.2),rgba(39,47,110,.08)); } .nav-links { display:flex; align-items:center; gap:8px; color:var(--muted); font-size:.95rem; } .nav-links a { padding:10px 14px; border-radius:999px; } .nav-links a:hover,.nav-links a[aria-current="page"] { color:var(--primary); background:var(--soft); }
+    .site-footer { padding:58px 0 26px; color:#fff; background:var(--primary); font-size:inherit; } .footer-grid { display:grid; grid-template-columns:1.35fr 1fr 1fr; gap:36px; padding-bottom:36px; border-bottom:1px solid rgba(255,255,255,.14); } .footer-brand { display:flex; flex-direction:column; gap:14px; } .footer-brand strong,.footer-column h2 { margin:0; color:#fff; font-size:1.08rem; } .footer-brand p,.footer-column a,.copyright { margin:0; color:rgba(255,255,255,.72); } .footer-column nav { display:grid; gap:9px; margin-top:14px; } .footer-column a { padding:0; text-decoration:none; } .footer-column a:hover { color:var(--secondary); background:none; transform:translateX(-3px); } .social-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; } .social-links a { display:grid; width:42px; height:42px; place-items:center; border:1px solid rgba(255,255,255,.16); border-radius:50%; color:#fff; background:rgba(255,255,255,.06); } .social-links a:hover { color:var(--primary); background:var(--secondary); } .footer-bottom { padding-top:24px; } footer p { margin:0; }
+    @media (max-width:960px) { .goals { grid-template-columns:repeat(2,minmax(0,1fr)); } .footer-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:760px) { .container { width:min(100% - 28px,1180px); } .navbar { flex-direction:column; align-items:flex-start; padding:15px 0; } nav { width:100%; overflow:auto; } .hero { padding:56px 0 48px; } section { padding:52px 0; } .about-card,.impact-wrap { grid-template-columns:1fr; gap:24px; padding:22px; } .about-photo { min-height:270px; } .goals,.impact-list,.footer-grid { grid-template-columns:1fr; } }
+.messages-banner {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  color: var(--background);
+  background: linear-gradient(90deg, var(--primary) 0%, #333c85 50%, var(--primary) 100%);
+}
+
+.messages-badge {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  font-weight: 800;
+  font-size: 0.98rem;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.16);
+  border-inline-end: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.messages-badge-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--secondary);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.messages-scroll-area {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messages-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.messages-static {
+  width: auto;
+  flex-wrap: wrap;
+  animation: none;
+}
+
+.message-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 36px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.message-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.message-item::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  margin-inline-start: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.message-item:last-child::after {
+  display: none;
+}
+
+@keyframes messages-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .messages-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#top" class="brand">
+        <span class="brand-mark">
+<img src="assets/images/log.jpg" alt="شعار الجمعية" style="width: 50px; height: 60px; object-fit: contain;margin-left:20px;">  </span>
+
+جمعية رواد اعمال المدينة|رياديون        
+    </a>
+
+      <nav class="nav-links" aria-label="التنقل الرئيسي">
+        <a href="#top">الرئيسية</a><a href="#about" aria-current="page">عن الجمعية</a><a href="#minutes">محاضر الإجتماعات</a><a href="#programs">برامج الجمعية</a><a href="#membership">عضويات الجمعية</a><a href="#trainers">استقطاب المدربين</a><a href="#contact">تواصل معنا</a>
+      </nav>
+    </div>
+  </header>
+<!-- ========================= Messages Banner ========================= -->
+<div class="messages-banner">
+  <div class="messages-badge">
+    <span class="messages-badge-icon">
+     
+    </span>
+    <span>رسائل الجمعية</span>
+  </div>
+  <div class="messages-scroll-area">
+  <div class="messages-track messages-static">
+    <span class="message-item">
+      
+      المرجع الريادي الأول في تمكين منظومة ريادة الأعمال بالمدينة المنورة
+    </span>
+    <span class="message-item">
+      من الفكرة إلى مشروع مستدام يصنع الأثر
+    </span>
+  </div>
+  </div>
+</div>
+  <main id="top">
+    <section class="hero">
+      <div class="container"><p class="eyebrow">من نحن</p><h1>نمكّن الأفكار والطموحات لتصبح مشاريع تصنع الأثر</h1><p>جمعية رواد أعمال المدينة المنورة تعمل على بناء منظومة ريادية ممكنة، تربط أصحاب الأفكار بالمعرفة والخبرات والفرص.</p></div>
+    </section>
+    <section id="about"><div class="container"><div class="about-card"><div class="about-text"><h2>جمعية رواد أعمال المدينة المنورة</h2><div class="accent"></div><p><strong>القادم أجمل.</strong></p><p>جمعية رواد أعمال المدينة المنورة لتطوير الأعمال من خلال تقديم الخدمات والاستشارات والدراسات والورش الإرشادية لأصحاب الأعمال بمختلف مستوياتهم، لتطوير الأعمال ونموها في المدينة المنورة.</p><p>كما نسعى إلى تنمية المنشآت عبر التطوير المادي والمعنوي، وتحسين نماذج الأعمال التشغيلية والاستشارية للوصول إلى حالة التميز.</p></div><div class="about-photo"><img src="assets/images/loog.jpg"alt="ورشة عمل لجمعية رواد أعمال المدينة المنورة"style="width: 590px; height: 350px; object-fit: cover; border-radius: 12px;">
+</div></div></div></section>
+    <section class="goals-section" id="goals"><div class="container"><div class="section-heading"><h2>الأهداف</h2><p>نسعى إلى تمكين منظومة ريادة الأعمال في المدينة المنورة عبر أهداف عملية ومتكاملة.</p></div><div class="goals">
+      <article class="goal"><span class="goal-icon">✓</span><p>تمكين أصحاب الأفكار من تطويرها وتحويلها إلى مشاريع قابلة للتطبيق والنمو.</p></article>
+      <article class="goal"><span class="goal-icon">✓</span><p>تنمية المهارات والقدرات الريادية لدى رواد الأعمال وأصحاب المشاريع الناشئة.</p></article>
+      <article class="goal"><span class="goal-icon">✓</span><p>دعم نمو واستدامة المشاريع الصغيرة والمتوسطة.</p></article>
+      <article class="goal"><span class="goal-icon">✓</span><p>ربط رواد الأعمال بالمستثمرين والخبراء والجهات الداعمة والممكنة.</p></article>
+      <article class="goal"><span class="goal-icon">✓</span><p>بناء شراكات استراتيجية تعزز التكامل بين أطراف منظومة ريادة الأعمال.</p></article>
+      <article class="goal"><span class="goal-icon">✓</span><p>نشر ثقافة الابتكار وريادة الأعمال في المجتمع.</p></article>
+      <article class="goal"><span class="goal-icon">✓</span><p>الإسهام في خلق فرص اقتصادية ومهنية تدعم تنمية المدينة المنورة.</p></article>
+      <article class="goal"><span class="goal-icon">✓</span><p>تعزيز دور المشاريع الريادية في تحقيق التنمية الاقتصادية والاجتماعية المستدامة.</p></article>
+    </div></div></section>
+    <section id="impact"><div class="container impact-wrap"><aside class="impact-intro"><h2>الأثر الذي نسعى إليه</h2><p>نسعى إلى بناء بيئة ريادية تساعد على نمو الأفكار والمشاريع وتحويلها إلى قيمة اقتصادية ومجتمعية مستدامة.</p></aside><div class="impact-list">
+      <article class="impact"><span>01</span><p>زيادة فرص نجاح واستدامة المشاريع الناشئة.</p></article><article class="impact"><span>02</span><p>تحويل الأفكار المبتكرة إلى مشاريع ذات قيمة اقتصادية ومجتمعية.</p></article><article class="impact"><span>03</span><p>تنمية الكفاءات والمهارات الريادية في المدينة المنورة.</p></article><article class="impact"><span>04</span><p>رفع مستوى التواصل والتكامل بين أطراف المنظومة الريادية.</p></article><article class="impact"><span>05</span><p>خلق فرص عمل واستثمار جديدة.</p></article><article class="impact"><span>06</span><p>تعزيز حضور المدينة المنورة بوصفها بيئة محفزة للابتكار وريادة الأعمال.</p></article>
+    </div></div></section>
+  </main>
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>جمعية رواد أعمال المدينة المنورة</strong>
+          <p>منصة وطنية لتمكين رواد الأعمال وتحفيز الابتكار وبناء اقتصاد ريادي مزدهر في المدينة المنورة.</p>
+          <p class="footer-registration">مسجلة برقم 5242 لدى المركز الوطني لتنمية القطاع غير الربحي - وزارة الموارد البشرية والتنمية الاجتماعية.</p>
+          <div class="social-links">
+            <a href="#" aria-label="إكس"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.6l-5.2-6.8L5.7 22H2.4l7.7-8.8L1 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.4 4h-2l12.3 16Z"/></svg></a>
+            <a href="#" aria-label="لينكدإن"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 8v10M6.5 4.5v.01M11.5 18V8m0 4c0-2.5 1.5-4 3.5-4s4 1.5 4 4.5V18"/></svg></a>
+            <a href="#" aria-label="انستغرام"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.7"/><circle cx="16.7" cy="7.3" r="1"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-column"><h2>تواصل معنا</h2><nav><a href="#">المملكة العربية السعودية، المدينة المنورة</a><a href="mailto:info@entrepreneurs.sa">info@entrepreneurs.sa</a><a href="#"> </a></nav></div>
+      </div>
+      <div class="footer-bottom"><p class="copyright">© 2026 جمعية رواد أعمال المدينة المنورة. جميع الحقوق محفوظة.</p></div>
+    </div>
+  </footer>
+  <script src="assets/js/page-links.js"></script>
+</body>
+</html>

@@ -1,0 +1,2326 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جمعية رواد أعمال المدينة المنورة | رياديون</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   Governance & Transparency - Main Styles
+   ========================================================= */
+
+:root {
+  --primary: #272F6E;
+  --secondary: #62D1BC;
+  --background: #FFFFFF;
+  --light-background: #F7F9FC;
+  --border: #E8EDF5;
+  --text: #1F2937;
+  --secondary-text: #6B7280;
+  --shadow-sm: 0 10px 30px rgba(39, 47, 110, 0.07);
+  --shadow-md: 0 20px 45px rgba(39, 47, 110, 0.12);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --container: 1180px;
+  --transition: 220ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  direction: rtl;
+  font-family: "Cairo", Arial, sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+.container {
+  width: min(100% - 40px, var(--container));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(232, 237, 245, 0.9);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 78px;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 13px;
+  color: var(--primary);
+  background: linear-gradient(135deg, rgba(98, 209, 188, 0.2), rgba(39, 47, 110, 0.08));
+  border: 1px solid var(--border);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition: color var(--transition), background var(--transition);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--secondary-text);
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+}
+
+.nav-dropdown-toggle::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-inline-end: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 30;
+  display: grid;
+  min-width: 240px;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--background);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown:hover .nav-dropdown-toggle,
+.nav-dropdown:focus-within .nav-dropdown-toggle,
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--primary);
+  background: var(--light-background);
+}
+
+.nav-dropdown-menu a {
+  border-radius: 10px;
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 88px 0 64px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(98, 209, 188, 0.18), transparent 30%),
+    linear-gradient(180deg, var(--light-background) 0%, var(--background) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 28px 0 auto auto;
+  width: 42%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(39, 47, 110, 0.16), transparent);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 760px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.76);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--secondary);
+}
+
+.hero h1 {
+  margin: 0;
+  color: var(--primary);
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.hero p {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: var(--secondary-text);
+  font-size: 1.14rem;
+}
+
+.detail-hero {
+  padding: 72px 0 52px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+/* =========================================================
+   Cards
+   ========================================================= */
+
+.section {
+  padding: 72px 0;
+}
+
+.governance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.programs-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.governance-card,
+.file-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--background);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.governance-card {
+  display: flex;
+  min-height: 310px;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.governance-card:hover,
+.file-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(98, 209, 188, 0.55);
+  box-shadow: var(--shadow-md);
+}
+
+.card-icon {
+  display: grid;
+  width: 66px;
+  height: 66px;
+  place-items: center;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  color: var(--secondary);
+  background: rgba(98, 209, 188, 0.12);
+  transition: transform var(--transition), background var(--transition);
+}
+
+.governance-card:hover .card-icon {
+  transform: translateY(-4px) scale(1.03);
+  background: rgba(98, 209, 188, 0.18);
+}
+
+.card-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke-width: 1.9;
+}
+
+.governance-card h2,
+.file-card h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.22rem;
+  line-height: 1.45;
+}
+
+.governance-card p,
+.file-card p,
+.empty-state p {
+  margin: 12px 0 0;
+  color: var(--secondary-text);
+  font-size: 0.98rem;
+}
+
+.file-date {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 16px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--primary);
+  background: var(--light-background);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.governance-card .button {
+  margin-top: auto;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  min-height: 46px;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--background);
+  background: var(--primary);
+  font-weight: 800;
+  line-height: 1.2;
+  transition: transform var(--transition), background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.button:hover {
+  transform: translateX(-3px);
+  background: var(--secondary);
+}
+
+.button.secondary {
+  color: var(--primary);
+  background: var(--background);
+  border-color: var(--border);
+}
+
+.button.secondary:hover {
+  color: var(--background);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================================================
+   Detail Pages
+   ========================================================= */
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.35;
+}
+
+.section-heading p {
+  max-width: 620px;
+  margin: 8px 0 0;
+  color: var(--secondary-text);
+}
+
+.files-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.file-card {
+  padding: 26px;
+}
+
+.file-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.file-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: var(--primary);
+  background: var(--light-background);
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.file-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 15px;
+  color: var(--secondary);
+  background: rgba(98, 209, 188, 0.12);
+}
+
+.file-card .button {
+  margin-top: 22px;
+}
+
+.empty-state {
+  padding: 34px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--light-background);
+}
+
+.empty-state h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+/* =========================================================
+   Messages Banner (marquee)
+   ========================================================= */
+
+.messages-banner {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  color: var(--background);
+  background: linear-gradient(90deg, var(--primary) 0%, #333c85 50%, var(--primary) 100%);
+}
+
+.messages-badge {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  font-weight: 800;
+  font-size: 0.98rem;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.16);
+  border-inline-end: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.messages-badge-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--secondary);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.messages-scroll-area {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messages-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.messages-static {
+  width: auto;
+  flex-wrap: wrap;
+  animation: none;
+}
+
+.message-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 36px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.message-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.message-item::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  margin-inline-start: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.message-item:last-child::after {
+  display: none;
+}
+
+@keyframes messages-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .messages-track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   Goals list
+   ========================================================= */
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.goal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--background);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.goal-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(98, 209, 188, 0.55);
+  box-shadow: var(--shadow-md);
+}
+
+.goal-check {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--background);
+  background: var(--secondary);
+}
+
+.goal-check svg {
+  width: 16px;
+  height: 16px;
+}
+
+.goal-item p {
+  margin: 4px 0 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   Impact list
+   ========================================================= */
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.impact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px;
+  border-radius: var(--radius-md);
+  background: var(--light-background);
+  border: 1px solid var(--border);
+}
+
+.impact-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--primary);
+  background: rgba(39, 47, 110, 0.08);
+}
+
+.impact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.impact-item p {
+  margin: 6px 0 0;
+  color: var(--secondary-text);
+  font-size: 0.96rem;
+}
+
+/* =========================================================
+   Closing statement
+   ========================================================= */
+
+.closing-cta {
+  padding: 72px 0;
+}
+
+.closing-cta-inner {
+  max-width: 780px;
+  margin-inline: auto;
+  padding: 46px 44px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, var(--primary) 0%, var(--secondary) 150%);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.closing-cta p {
+  margin: 0 0 18px;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.join-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 17px 34px;
+  border: none;
+  border-radius: 999px;
+  color: var(--primary);
+  background: #FFFFFF;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(98, 209, 188, 0.55);
+  transition: transform var(--transition), background var(--transition), color var(--transition);
+  animation: join-pulse 2.6s ease-in-out infinite;
+}
+
+.join-cta svg {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition);
+}
+
+.join-cta:hover {
+  transform: translateY(-3px);
+  color: var(--background);
+  background: var(--secondary);
+  animation-play-state: paused;
+}
+
+.join-cta:hover svg {
+  transform: translateX(-4px);
+}
+
+@keyframes join-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(98, 209, 188, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(98, 209, 188, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(98, 209, 188, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .join-cta {
+    animation: none;
+  }
+}
+
+/* =========================================================
+   Join Modal
+   ========================================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 20, 64, 0.55);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-panel {
+  position: relative;
+  width: min(100%, 640px);
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  background: var(--background);
+  box-shadow: var(--shadow-md);
+  transform: translateY(16px) scale(0.98);
+  transition: transform 220ms ease;
+}
+
+.modal-overlay.is-open .modal-panel {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  color: var(--secondary-text);
+  background: var(--light-background);
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition);
+}
+
+.modal-close:hover {
+  color: var(--primary);
+  background: var(--border);
+}
+
+.modal-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.modal-header {
+  margin-bottom: 26px;
+  padding-inline-end: 40px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.modal-header p {
+  margin: 8px 0 0;
+  color: var(--secondary-text);
+  font-size: 0.96rem;
+}
+
+/* Step 1: option cards */
+
+.join-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.join-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--background);
+  font-family: inherit;
+  text-align: right;
+  cursor: pointer;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.join-option:hover {
+  transform: translateY(-4px);
+  border-color: rgba(98, 209, 188, 0.6);
+  box-shadow: var(--shadow-sm);
+}
+
+.join-option-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--secondary);
+  background: rgba(98, 209, 188, 0.12);
+}
+
+.join-option-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.join-option-label {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.02rem;
+}
+
+.join-option-desc {
+  color: var(--secondary-text);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* Forms */
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-back {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--secondary-text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.form-back:hover {
+  color: var(--primary);
+}
+
+.form-back svg {
+  width: 16px;
+  height: 16px;
+  transform: scaleX(-1);
+}
+
+.form-title {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+.form-intro {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: var(--light-background);
+  color: var(--secondary-text);
+  font-size: 0.92rem;
+  line-height: 1.85;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form-field .hint {
+  color: var(--secondary-text);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.form-field .required {
+  color: #d9534f;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"],
+.form-field input[type="number"],
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  background: var(--background);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-field select[multiple] {
+  min-height: 130px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(98, 209, 188, 0.18);
+}
+
+.checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.checkbox-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-size: 0.94rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkbox-item input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--secondary);
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-md);
+  color: var(--secondary-text);
+  background: var(--light-background);
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.file-upload:hover {
+  border-color: var(--secondary);
+  color: var(--primary);
+}
+
+.file-upload svg {
+  width: 20px;
+  height: 20px;
+}
+
+.join-form .button {
+  align-self: flex-start;
+}
+
+/* Success state */
+
+.join-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px 6px;
+  text-align: center;
+}
+
+.success-icon {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  color: var(--background);
+  background: var(--secondary);
+}
+
+.success-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.join-success h3 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.join-success p {
+  margin: 0;
+  color: var(--secondary-text);
+}
+
+.join-success .button.secondary {
+  margin-top: 10px;
+}
+
+@media (max-width: 640px) {
+  .modal-panel {
+    padding: 28px 20px;
+  }
+
+  .join-options,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   Intro / About split
+   ========================================================= */
+
+.intro-split {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 48px;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--background);
+  box-shadow: var(--shadow-sm);
+}
+
+.intro-media {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.intro-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-text p {
+  margin: 0 0 18px;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   Two-up cards (mission / vision)
+   ========================================================= */
+
+.cards-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.mv-card {
+  padding: 34px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--background);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.mv-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(98, 209, 188, 0.55);
+  box-shadow: var(--shadow-md);
+}
+
+.mv-icon {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  color: var(--secondary);
+  background: rgba(98, 209, 188, 0.12);
+}
+
+.mv-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.9;
+}
+
+.mv-card h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+.mv-card p {
+  margin: 12px 0 0;
+  color: var(--secondary-text);
+}
+
+.mv-underline {
+  width: 46px;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: var(--secondary);
+}
+
+/* =========================================================
+   Programs (poster cards)
+   ========================================================= */
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.poster-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--background);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.poster-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(98, 209, 188, 0.55);
+  box-shadow: var(--shadow-md);
+}
+
+.poster-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+/* =========================================================
+   Partners
+   ========================================================= */
+
+.partners-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+  padding: 12px 0;
+}
+
+.partner-logo {
+  display: grid;
+  place-items: center;
+  height: 76px;
+  padding: 0 12px;
+  transition: transform var(--transition);
+}
+
+.partner-logo:hover {
+  transform: translateY(-3px);
+}
+
+.partner-logo img {
+  max-height: 100%;
+  max-width: 170px;
+  object-fit: contain;
+}
+
+.section-alt {
+  background: var(--light-background);
+}
+
+.section-tint {
+  color: var(--background);
+  background: linear-gradient(90deg, var(--primary) 0%, #333c85 50%, var(--primary) 100%);
+}
+
+.section-tint .section-heading h2 {
+  color: var(--background);
+}
+
+.section-tint .section-heading p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.site-footer {
+  padding: 58px 0 26px;
+  color: var(--background);
+  background: var(--primary);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.35fr repeat(3, minmax(0, 1fr));
+  gap: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-brand strong,
+.footer-column h2 {
+  margin: 0;
+  color: var(--background);
+  font-size: 1.08rem;
+}
+
+.footer-brand p,
+.footer-column a,
+.footer-column p,
+.copyright {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-registration {
+  padding-top: 12px;
+  margin-top: 12px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.footer-brand p,
+.footer-column p {
+  margin: 0;
+}
+
+.footer-column nav {
+  display: grid;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.footer-column a {
+  transition: color var(--transition), transform var(--transition);
+}
+
+.footer-column a:hover {
+  color: var(--secondary);
+  transform: translateX(-3px);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.social-links a {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  color: var(--background);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.social-links a:hover {
+  color: var(--primary);
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 24px;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .governance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .files-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .intro-split {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-media {
+    order: -1;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 28px, var(--container));
+  }
+
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    overflow: visible;
+    flex-wrap: wrap;
+    padding-bottom: 4px;
+  }
+
+  .nav-links a,
+  .nav-dropdown-toggle {
+    white-space: nowrap;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    display: none;
+    width: 100%;
+    min-width: min(100%, 280px);
+    margin-top: 8px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
+    display: grid;
+  }
+
+  .hero {
+    padding: 64px 0 46px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .governance-grid,
+  .files-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .governance-card {
+    min-height: 0;
+  }
+
+  .section-heading,
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .intro-split {
+    padding: 24px;
+  }
+
+  .cards-2,
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partners-row {
+    gap: 26px;
+  }
+
+  .message-item {
+    padding: 0 22px;
+    font-size: 0.88rem;
+  }
+
+  .messages-badge {
+    padding: 12px 16px;
+    font-size: 0.86rem;
+  }
+
+  .messages-badge span:last-child {
+    display: none;
+  }
+
+  .goals-grid,
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .closing-cta {
+    padding: 52px 0;
+  }
+
+  .closing-cta-inner {
+    padding: 32px 24px;
+  }
+}
+
+/* =========================================================
+   Join modal — reference layout
+   ========================================================= */
+.modal-overlay {
+  padding: 18px;
+  background: rgba(16, 24, 50, 0.62);
+}
+
+.modal-panel {
+  width: min(100%, 500px);
+  max-height: min(88vh, 660px);
+  padding: 34px 30px 30px;
+  border: 1px solid #e7ebf2;
+  border-radius: 12px;
+  box-shadow: 0 24px 60px rgba(14, 24, 59, 0.25);
+}
+
+.modal-close {
+  top: 12px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.modal-header {
+  margin-bottom: 20px;
+  padding: 0 22px;
+  text-align: center;
+}
+
+.modal-header h2 {
+  font-size: 1.32rem;
+  line-height: 1.35;
+}
+
+.modal-header p {
+  margin-top: 5px;
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.join-options {
+  gap: 16px;
+}
+
+.join-option {
+  min-height: 148px;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 14px;
+  border-radius: 9px;
+  text-align: center;
+}
+
+.join-option-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.join-option-label {
+  font-size: 0.92rem;
+}
+
+.join-option-desc {
+  max-width: 178px;
+  font-size: 0.72rem;
+  line-height: 1.65;
+}
+
+/* النماذج أصبحت في صفحات مستقلة، لذا لا تعرض النسخ القديمة داخل النافذة. */
+#volunteerForm,
+#trainerForm,
+#joinSuccess {
+  display: none !important;
+}
+
+.join-form {
+  gap: 12px;
+}
+
+.form-back {
+  margin: -8px 0 2px;
+}
+
+.form-title {
+  text-align: center;
+}
+
+.form-grid {
+  gap: 10px 14px;
+}
+
+.form-field {
+  gap: 4px;
+}
+
+.form-field label {
+  font-size: 0.78rem;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"],
+.form-field input[type="number"],
+.form-field select,
+.form-field textarea {
+  min-height: 36px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+}
+
+.join-form .button {
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background: #58c7b3;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 640px) {
+  .modal-panel {
+    padding: 32px 18px 20px;
+  }
+
+  .modal-header {
+    padding: 0 12px;
+  }
+
+  .join-options {
+    gap: 10px;
+  }
+
+  .join-option {
+    min-height: 138px;
+    padding: 14px 8px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ========================= Header ========================= -->
+<header class="site-header">
+  <div class="container navbar">
+    <a href="#" class="brand">
+     
+  <span class="brand-mark">
+<img src="assets/images/log.jpg" alt="شعار الجمعية" style="width: 50px; height: 60px; object-fit: contain;margin-left:20px;">  </span>
+
+جمعية رواد اعمال المدينة|رياديون        
+    </a>
+    <nav class="nav-links">
+      <a href="#" aria-current="page">الرئيسية</a>
+        <a href="about.html">عن الجمعية</a>
+          <a href="#programs">المركز الأعلامي</a>
+          <a href="memberships.html">عضويات الجمعية</a>
+</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button">الحوكمة واللوائح</button>
+        <div class="nav-dropdown-menu">
+          <a href="governance/index.html">بوابة الحوكمة</a>
+          <a href="governance/license.html">الترخيص</a>
+          <a href="governance/board.html">مجلس الإدارة</a>
+          <a href="governance/assembly.html">الجمعية العمومية</a>
+          <a href="governance/executive.html">الإدارة التنفيذية</a>
+          <a href="governance/annual-reports.html">التقارير السنوية</a>
+          <a href="governance/financial-reports.html">التقارير المالية</a>
+          <a href="governance/policies.html">السياسات واللوائح</a>
+          <a href="governance/documents.html">الوثائق والسياسات</a>
+          <a href="governance/team.html">الفريق والتطوع</a>
+          <a href="governance/partners.html">الشركاء</a>
+          <a href="guides-forms/index.html">الأدلة والنماذج</a>
+        </div>
+      </div>
+
+<div class="nav-dropdown">
+ <button class="nav-dropdown-toggle" type="button"> تواصل معنا </button>
+        <div class="nav-dropdown-menu">
+
+          <a href="employment.html">التوظيف</a>
+          <a href="contact-us.html">تواصل معنا</a>
+      </div>
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+
+<!-- ========================= Hero / About ========================= -->
+<section class="hero" id="about">
+  <div class="container">
+    <div class="intro-split">
+      <div class="intro-media">
+   <img src="assets/images/logg.jpg" alt="ورشة عمل لجمعية رواد أعمال المدينة المنورة">
+      </div>
+      <div class="intro-text">
+        <p>
+         جمعية رواد أعمال المدينة المنورة لتطوير الأعمال من خلال تقديم الخدمات والاستشارات والدراسات والورش الإرشادية لأصحاب الأعمال بمختلف مستوياتهم، لتطوير الأعمال ونموها في المدينة المنورة.
+        </p>
+        <p>
+          كما نسعى إلى تنمية المنشآت عبر التطوير المادي والمعنوي، وتحسين نماذج الأعمال التشغيلية والاستشارية للوصول إلى حالة التميز.
+        </p>
+      </div>
+    </div>
+
+    <div class="cards-2">
+      <div class="mv-card">
+        <span class="mv-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+        </span>
+        <h2>الرؤية</h2>
+        <span class="mv-underline"></span>
+        <p>أن تكون الجمعية المرجع الريادي الأول في تمكين منظومة ريادة الأعمال بالمدينة المنورة.</p>
+      </div>
+      <div class="mv-card">
+        <span class="mv-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+        </span>
+        <h2>الرسالة</h2>
+        <span class="mv-underline"></span>
+        <p>تمكين رواد الأعمال وأصحاب الأفكار من خلال برامج نوعية، وإرشاد متخصص، وشراكات فاعلة؛ تسهم في تطوير قدراتهم، وتسريع نمو مشاريعهم، وتعزيز أثرهم الاقتصادي والمجتمعي.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= Goals ========================= -->
+<section class="section section-tint">
+  <div class="container">
+    <div class="section-heading">
+      <h2>الأهداف</h2>
+      <p>نعمل من خلال أهداف واضحة تضع رائد الأعمال في قلب كل برنامج ومبادرة.</p>
+    </div>
+    <div class="goals-grid">
+      <div class="goal-item">
+        <span class="goal-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <p>تمكين أصحاب الأفكار من تطويرها وتحويلها إلى مشاريع قابلة للتطبيق والنمو.</p>
+      </div>
+      <div class="goal-item">
+        <span class="goal-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <p>تنمية المهارات والقدرات الريادية لدى رواد الأعمال وأصحاب المشاريع الناشئة.</p>
+      </div>
+      <div class="goal-item">
+        <span class="goal-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <p>دعم نمو واستدامة المشاريع الصغيرة والمتوسطة.</p>
+      </div>
+      <div class="goal-item">
+        <span class="goal-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <p>ربط رواد الأعمال بالمستثمرين والخبراء والجهات الداعمة والممكنة.</p>
+      </div>
+      <div class="goal-item">
+        <span class="goal-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <p>بناء شراكات استراتيجية تعزز التكامل بين أطراف منظومة ريادة الأعمال.</p>
+      </div>
+      <div class="goal-item">
+        <span class="goal-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <p>نشر ثقافة الابتكار وريادة الأعمال في المجتمع.</p>
+      </div>
+      <div class="goal-item">
+        <span class="goal-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <p>الإسهام في خلق فرص اقتصادية ومهنية تدعم تنمية المدينة المنورة.</p>
+      </div>
+      <div class="goal-item">
+        <span class="goal-check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <p>تعزيز دور المشاريع الريادية في تحقيق التنمية الاقتصادية والاجتماعية المستدامة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= Programs ========================= -->
+<section class="section" id="programs">
+  <div class="container">
+    <div class="section-heading">
+      <h2>برامج ومبادرات الجمعية</h2>
+      <p>تقدم الجمعية مجموعة من البرامج والمبادرات المصممة لمواكبة احتياجات رواد الأعمال في مختلف مراحل رحلتهم.</p>
+    </div>
+    <div class="governance-grid programs-cards">
+      <div class="governance-card">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+        </span>
+        <h2>برامج التأهيل الريادي</h2>
+        <p>برامج تدريبية متخصصة تساعد المشاركين على اكتساب المعارف والمهارات اللازمة لتطوير الأفكار وبناء المشاريع.</p>
+      </div>
+      <div class="governance-card">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 11-13h-8l1-7Z"/></svg>
+        </span>
+        <h2>المعسكرات الريادية</h2>
+        <p>تجارب تدريبية مكثفة تنقل المشاركين من اكتشاف الفرص وصياغة الأفكار إلى بناء النماذج الأولية والاستعداد لدخول السوق.</p>
+      </div>
+      <div class="governance-card">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h.01M15 9h.01M9 15h6"/><path d="M4 9h2M4 15h2M18 9h2M18 15h2"/></svg>
+        </span>
+        <h2>برامج الابتكار والذكاء الاصطناعي</h2>
+        <p>برامج نوعية تمكّن المشاركين من توظيف التقنيات الحديثة في تطوير حلول مبتكرة تعالج تحديات واقعية.</p>
+      </div>
+      <div class="governance-card">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+        </span>
+        <h2>برامج الإرشاد والتوجيه</h2>
+        <p>جلسات فردية وجماعية يقدمها خبراء ومتخصصون لمساعدة رواد الأعمال على تجاوز التحديات واتخاذ القرارات المناسبة.</p>
+      </div>
+      <div class="governance-card">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="7" r="3"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M14 14.5c2.9.4 5 2.7 5 5.5"/></svg>
+        </span>
+        <h2>اللقاءات والملتقيات الريادية</h2>
+        <p>مساحات تجمع رواد الأعمال والخبراء والمستثمرين لتبادل التجارب والمعرفة، وبناء العلاقات المهنية.</p>
+      </div>
+      <div class="governance-card">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1 0 5.7l-4.7 4.7-3.2-3.2 4.7-4.7a4 4 0 0 1 3.2-2.5Z"/><path d="M9.5 14.5 4 20"/><path d="M17 3l1.5 1.5"/><path d="M19.5 5.5 21 7"/></svg>
+        </span>
+        <h2>ورش العمل المتخصصة</h2>
+        <p>ورش تطبيقية تغطي تأسيس المشاريع، وتطوير نماذج الأعمال، والتسويق، والإدارة المالية، والنمو والاستدامة.</p>
+      </div>
+      <div class="governance-card">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 9 11l4 4 8-8"/><path d="M21 7v6h-6"/></svg>
+        </span>
+        <h2>برامج تطوير المشاريع الناشئة</h2>
+        <p>مسارات عملية تدعم المشاريع في تحسين منتجاتها وخدماتها، وفهم احتياجات عملائها، والاستعداد للنمو والاستثمار.</p>
+      </div>
+      <div class="governance-card">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8"/><path d="M6 8V6a2 2 0 0 1 2-2h2"/><path d="M18 8V6a2 2 0 0 0-2-2h-2"/><path d="M6 16v2a2 2 0 0 0 2 2h2"/><path d="M18 16v2a2 2 0 0 1-2 2h-2"/></svg>
+        </span>
+        <h2>برامج بناء الشراكات</h2>
+        <p>مبادرات تعزز التواصل والتكامل بين رواد الأعمال والجهات الحكومية والقطاع الخاص والجامعات والمستثمرين.</p>
+      </div>
+      <div class="governance-card">
+        <span class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a2 2 0 0 0 2 2h1l3 5 1-5h3l6 4V6l-6 4H9L6 6H5a2 2 0 0 0-2 2Z"/><path d="M21 9v6"/></svg>
+        </span>
+        <h2>المبادرات المجتمعية</h2>
+        <p>مبادرات تسهم في نشر ثقافة ريادة الأعمال، وتحفيز الطاقات الشابة، وتعزيز المشاركة في صناعة حلول ذات أثر.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= Partners ========================= -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <h2>شركاء النجاح</h2>
+    </div>
+    <div class="partners-row">
+      <span class="partner-logo"><img src="assets/images/partners/csa-madinah.jpeg" alt="مجلس الجمعيات الأهلية بمنطقة المدينة المنورة"></span>
+      <span class="partner-logo"><img src="assets/images/partners/fehb.png" alt="فكر هب"></span>
+      <span class="partner-logo"><img src="assets/images/partners/madinah-chamber.png" alt="غرفة المدينة المنورة"></span>
+      <span class="partner-logo"><img src="assets/images/partners/taibah-university.webp" alt="جامعة طيبة"></span>
+      <span class="partner-logo"><img src="assets/images/partners/business-hub.jpeg" alt="Business Hub"></span>
+      <span class="partner-logo"><img src="assets/images/partners/ncnps.jpeg" alt="المركز الوطني لتنمية القطاع غير الربحي"></span>
+    </div>
+  </div>
+</section>
+<!-- ========================= Closing statement ========================= -->
+<section class="closing-cta">
+  <div class="container closing-cta-inner">
+    <p>
+      في جمعية رواد أعمال المدينة المنورة، نؤمن بأن ريادة الأعمال لا تقتصر على تأسيس
+      المشاريع، بل تمتد إلى صناعة الأثر، وابتكار الحلول، وبناء مستقبل أكثر ازدهارًا.
+    </p>
+    <p>
+      ومن خلال برامجنا ومبادراتنا وشراكاتنا، نعمل على تمكين رواد الأعمال ليكونوا شركاء
+      فاعلين في تنمية اقتصاد المدينة المنورة، وتحويل طموحاتهم إلى مشاريع مستدامة وقصص
+      نجاح ملهمة.
+    </p>
+    <button type="button" class="join-cta" id="openJoinModal">
+      <span>انضم إلينا الآن</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ========================= Footer ========================= -->
+<footer class="site-footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <strong>جمعية رواد أعمال المدينة المنورة</strong>
+        <p>منصة وطنية لتمكين رواد الأعمال وتحفيز الابتكار وبناء اقتصاد ريادي مزدهر في المدينة المنورة.</p>
+        <p class="footer-registration">مسجلة برقم 5242 لدى المركز الوطني لتنمية القطاع غير الربحي - وزارة الموارد البشرية والتنمية الاجتماعية.</p>
+        <div class="social-links">
+          <a href="#" aria-label="اكس"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.6l-5.2-6.8L5.7 22H2.4l7.7-8.8L1 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.4 4h-2l12.3 16Z"/></svg></a>
+          <a href="#" aria-label="لينكدإن"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 8v10M6.5 4.5v.01M11.5 18V8m0 4c0-2.5 1.5-4 3.5-4s4 1.5 4 4.5V18"/></svg></a>
+          <a href="#" aria-label="انستغرام"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.7"/><circle cx="16.7" cy="7.3" r="1"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h2>تواصل معنا</h2>
+        <nav>
+          <a href="#">المملكة العربية السعودية، المدينة المنورة</a>
+          <a href="#">info@entrepreneurs.sa</a>
+          <a href="#"></a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h2>روابط الموقع</h2>
+        <nav>
+          <a href="about.html">عن الجمعية</a>
+          <a href="#programs">برامج الجمعية</a>
+          <a href="memberships.html">عضويات الجمعية</a>
+          <a href="#trainers">استقطاب المدربين</a>
+          <a href="volunteer-form.html">نموذج التطوع</a>
+          <a href="employment.html">التوظيف</a>
+          <a href="contact-us.html">تواصل معنا</a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h2>الحوكمة</h2>
+        <nav>
+          <a href="governance/index.html">بوابة الحوكمة</a>
+          <a href="governance/license.html">الترخيص</a>
+          <a href="governance/annual-reports.html">التقارير السنوية</a>
+          <a href="governance/financial-reports.html">التقارير المالية</a>
+          <a href="governance/board.html">مجلس الإدارة</a>
+          <a href="governance/assembly.html">الجمعية العمومية</a>
+          <a href="governance/executive.html">المسؤول التنفيذي</a>
+          <a href="governance/policies.html">السياسات واللوائح</a>
+          <a href="governance/documents.html">وثائق وسياسات</a>
+          <a href="governance/team.html">الفريق والتطوع</a>
+          <a href="governance/partners.html">الشركاء</a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h2>الأدلة والنماذج</h2>
+        <nav>
+          <a href="guides-forms/index.html">بوابة الأدلة والنماذج</a>
+          <a href="guides-forms/guides.html">الأدلة الإرشادية</a>
+          <a href="guides-forms/forms.html">النماذج</a>
+          <a href="guides-forms/templates.html">القوالب</a>
+          <a href="guides-forms/manuals.html">الأدلة التشغيلية</a>
+          <a href="guides-forms/downloads.html">التحميلات</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">© 2026 جمعية رواد أعمال المدينة المنورة. جميع الحقوق محفوظة.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ========================= Join Modal ========================= -->
+<div class="modal-overlay" id="joinModalOverlay" aria-hidden="true">
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="joinModalTitle">
+    <button type="button" class="modal-close" id="joinModalClose" aria-label="إغلاق">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg>
+    </button>
+
+    <div class="modal-header">
+      <h2 id="joinModalTitle">انضم إلينا</h2>
+      <p>اختر الطريقة التي ترغب من خلالها الانضمام إلى منظومة جمعية رواد أعمال المدينة المنورة</p>
+    </div>
+
+    <!-- Step 1: choose path -->
+    <div class="join-options" id="joinOptions">
+      <a class="join-option" href="trainer-form.html" data-target="trainer">
+        <span class="join-option-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+        </span>
+        <span class="join-option-label">استقطاب مدربين ومستشارين</span>
+        <span class="join-option-desc">سجّل بياناتك كمدرب أو مستشار للانضمام لقاعدة خبراء الجمعية</span>
+      </a>
+      <a class="join-option" href="volunteer-form.html" data-target="volunteer">
+        <span class="join-option-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        </span>
+        <span class="join-option-label">تطوع بخبرتك</span>
+        <span class="join-option-desc">ساهم في تطوير بيئة الأعمال بالمدينة المنورة بخبرتك ووقتك</span>
+      </a>
+    </div>
+
+    <!-- Volunteer form -->
+    <form class="join-form" id="volunteerForm" hidden novalidate>
+      <button type="button" class="form-back" data-back>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19 7-7-7-7"/></svg>
+        رجوع لاختيار طريقة الانضمام
+      </button>
+      <h3 class="form-title">سجّل وساعدنا في تطوير بيئة الأعمال بالمدينة المنورة</h3>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="v-name">الاسم</label>
+          <input id="v-name" name="name" type="text" required>
+        </div>
+        <div class="form-field">
+          <label for="v-area">مجال التطوع</label>
+          <select id="v-area" name="area">
+            <option value="">- اختر -</option>
+            <option>التدريب والتوجيه</option>
+            <option>الاستشارات الريادية</option>
+            <option>التسويق والإعلام</option>
+            <option>الشراكات والرعاية</option>
+            <option>تنظيم الفعاليات</option>
+            <option>أخرى</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="v-nationality">الجنسية</label>
+          <input id="v-nationality" name="nationality" type="text">
+        </div>
+        <div class="form-field">
+          <label for="v-city">مدينة الإقامة</label>
+          <input id="v-city" name="city" type="text">
+        </div>
+        <div class="form-field">
+          <label for="v-major">التخصص</label>
+          <input id="v-major" name="major" type="text">
+        </div>
+        <div class="form-field">
+          <label for="v-gender">الجنس</label>
+          <select id="v-gender" name="gender">
+            <option value="">- الجنس -</option>
+            <option>ذكر</option>
+            <option>أنثى</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="v-email">البريد الإلكتروني</label>
+        <input id="v-email" name="email" type="email" required>
+      </div>
+
+      <button type="submit" class="button">تسجيل</button>
+    </form>
+
+    <!-- Trainer / consultant form -->
+    <form class="join-form" id="trainerForm" hidden novalidate>
+      <button type="button" class="form-back" data-back>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19 7-7-7-7"/></svg>
+        رجوع لاختيار طريقة الانضمام
+      </button>
+
+      <p class="form-intro">
+        من ضمن أهداف جمعية رواد أعمال المدينة المنورة رفع كفاءة الرواد والرائدات من خلال
+        التدريب والتوجيه، تشرف الجمعية بإنشاء قاعدة بيانات للنخبة من المدربين والمستشارين
+        في مختلف المجالات ذات العلاقة بريادة الأعمال وتطوير المشاريع الريادية والتدريبية
+        والتثقيفية. ويسعدنا انضمامكم عبر تعبئة الحقول التالية:
+      </p>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="t-name">اسم المدرب</label>
+          <input id="t-name" name="name" type="text" required>
+        </div>
+        <div class="form-field">
+          <label for="t-major">التخصص</label>
+          <input id="t-major" name="major" type="text">
+        </div>
+        <div class="form-field">
+          <label for="t-email">البريد الإلكتروني</label>
+          <input id="t-email" name="email" type="email" required>
+        </div>
+        <div class="form-field">
+          <label for="t-phone">رقم التواصل</label>
+          <input id="t-phone" name="phone" type="tel">
+        </div>
+        <div class="form-field">
+          <label for="t-field">المجال</label>
+          <input id="t-field" name="field" type="text">
+        </div>
+        <div class="form-field">
+          <label for="t-experience">الخبرة</label>
+          <input id="t-experience" name="experience" type="text">
+        </div>
+        <div class="form-field">
+          <label for="t-years">عدد سنوات الخبرة في التدريب أو الإستشارات</label>
+          <input id="t-years" name="years" type="number" min="0">
+        </div>
+        <div class="form-field">
+          <label for="t-city">المدينة</label>
+          <input id="t-city" name="city" type="text">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="t-domains">المجالات التي يمكن تقديمها <span class="required">*</span> <span class="hint">(يمكنك إختيار خيار واحد أو أكثر)</span></label>
+        <select id="t-domains" name="domains" multiple size="5">
+          <option>ريادة الأعمال</option>
+          <option>التسويق والمبيعات</option>
+          <option>الإدارة المالية</option>
+          <option>الابتكار والذكاء الاصطناعي</option>
+          <option>تطوير نماذج الأعمال</option>
+          <option>القيادة وإدارة الفرق</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="t-related">خبرات ذات صلة</label>
+        <textarea id="t-related" name="related" rows="3"></textarea>
+      </div>
+
+      <div class="form-field">
+        <label for="t-workshops">عناوين الورش السابقة للمدرب</label>
+        <textarea id="t-workshops" name="workshops" rows="3"></textarea>
+      </div>
+
+      <div class="form-field">
+        <label>المجالات التي يمكن تقديمها</label>
+        <div class="checkbox-row">
+          <label class="checkbox-item"><input type="checkbox" name="offer" value="training"> التدريب</label>
+          <label class="checkbox-item"><input type="checkbox" name="offer" value="consulting"> الإستشارات</label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>رخصة المدرب</label>
+        <label class="file-upload">
+          <input type="file" name="license" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M5 20h14"/></svg>
+          <span class="file-upload-text">يرجى إختيار الملف لرفعه</span>
+        </label>
+      </div>
+
+      <button type="submit" class="button">إرسال</button>
+    </form>
+
+    <!-- Success state -->
+    <div class="join-success" id="joinSuccess" hidden>
+      <span class="success-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </span>
+      <h3>شكرًا لتسجيلك!</h3>
+      <p>وصلنا طلبك بنجاح، وسيتواصل معك فريق الجمعية قريبًا.</p>
+      <button type="button" class="button secondary" data-close>إغلاق</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var overlay = document.getElementById('joinModalOverlay');
+  var openBtn = document.getElementById('openJoinModal');
+  var closeBtn = document.getElementById('joinModalClose');
+  var modalPanel = overlay.querySelector('.modal-panel');
+  var optionsView = document.getElementById('joinOptions');
+  var volunteerForm = document.getElementById('volunteerForm');
+  var trainerForm = document.getElementById('trainerForm');
+  var successView = document.getElementById('joinSuccess');
+  var optionButtons = document.querySelectorAll('.join-option');
+  var backButtons = document.querySelectorAll('[data-back]');
+  var closeInnerButtons = document.querySelectorAll('[data-close]');
+
+  function showOptionsView() {
+    optionsView.hidden = false;
+    volunteerForm.hidden = true;
+    trainerForm.hidden = true;
+    successView.hidden = true;
+    modalPanel.scrollTop = 0;
+  }
+
+  function showSelectedForm(target) {
+    optionsView.hidden = true;
+    successView.hidden = true;
+    trainerForm.hidden = target !== 'trainer';
+    volunteerForm.hidden = target !== 'volunteer';
+    modalPanel.scrollTop = 0;
+
+    window.setTimeout(function () {
+      var activeForm = target === 'trainer' ? trainerForm : volunteerForm;
+      var firstField = activeForm.querySelector('input, select, textarea');
+      if (firstField) firstField.focus();
+    }, 230);
+  }
+
+  function openModal() {
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    showOptionsView();
+  }
+
+  function closeModal() {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    window.setTimeout(function () {
+      volunteerForm.reset();
+      trainerForm.reset();
+      showOptionsView();
+    }, 250);
+  }
+
+ if (openBtn) {
+    openBtn.addEventListener('click', openModal);
+  }
+
+  // زر "انضموا إلينا" في الهيدر (يُحقن لاحقاً عبر page-links.js)
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('.join-us-link');
+    if (!link) return;
+    e.preventDefault();
+    openModal();
+  });
+
+  // فتح المودال تلقائياً عند القدوم من صفحة أخرى بالرابط index.html#join-us
+  if (window.location.hash === '#join-us') {
+    openModal();
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeModal();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeModal();
+  });
+
+  optionButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.getAttribute('data-target');
+      window.location.href = target === 'trainer' ? 'trainer-form.html' : 'volunteer-form.html';
+    });
+  });
+
+  backButtons.forEach(function (btn) {
+    btn.addEventListener('click', showOptionsView);
+  });
+
+  closeInnerButtons.forEach(function (btn) {
+    btn.addEventListener('click', closeModal);
+  });
+
+  function handleSubmit(form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.hidden = true;
+      successView.hidden = false;
+    });
+  }
+
+  handleSubmit(volunteerForm);
+  handleSubmit(trainerForm);
+
+  var fileInput = trainerForm.querySelector('input[type="file"]');
+  var fileLabel = trainerForm.querySelector('.file-upload-text');
+  if (fileInput && fileLabel) {
+    fileInput.addEventListener('change', function () {
+      fileLabel.textContent = fileInput.files.length ? fileInput.files[0].name : 'يرجى إختيار الملف لرفعه';
+    });
+  }
+})();
+</script>
+
+<script src="assets/js/page-links.js"></script>
+</body>
+</html>
+

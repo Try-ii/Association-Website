@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اللوائح / السياسات | بوابة الحوكمة والشفافية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header"><div class="container navbar"><a class="brand" href="index.html" aria-label="بوابة الحوكمة والشفافية">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 7v6c0 5 3.5 7.5 8 8 4.5-.5 8-3 8-8V7l-8-4Z"/><path d="m9 12 2 2 4-5"/></svg>
+        </span>
+        <span>بوابة الحوكمة</span>
+      </a><nav class="nav-links"><a href="index.html">الرئيسية</a><a href="#content" aria-current="page">اللوائح / السياسات</a></nav></div></header>
+  <main>
+    <section class="hero detail-hero"><div class="container hero-content"><p class="eyebrow">بوابة الحوكمة والشفافية</p><h1>اللوائح / السياسات</h1><p>اللوائح الأساسية والتنظيمية والمالية ولوائح المشتريات والموارد البشرية.</p><div class="hero-actions"><a class="button secondary" href="index.html">الرئيسية</a></div></div></section>
+    <section class="section" id="content"><div class="container section-stack">
+        <article class="portal-section detail-panel" id="regulations" data-governance-section="regulations">
+                  <div class="portal-section-head">
+                    <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span>
+                    <div><h2>اللوائح</h2><p>اللوائح الأساسية والتنظيمية والمالية ولوائح المشتريات والموارد البشرية.</p></div>
+                  </div>
+                  <div class="document-card-grid">
+                    <a class="document-card" data-category="regulations" href="../assets/pdf/اللائحة الاساسية.pdf" download><span class="pdf-badge">PDF</span><h3>اللائحة الأساسية</h3><p>اللائحة الأساسية للجمعية.</p></a>
+                    <a class="document-card" data-category="regulations financial" href="../assets/pdf/لائحة السياسات المالية.pdf" download><span class="pdf-badge">PDF</span><h3>لائحة السياسات المالية</h3><p>اللائحة المالية المنظمة للعمل المالي.</p></a>
+                    <a class="document-card" data-category="regulations" href="../assets/pdf/لائحة المشتريات .pdf" download><span class="pdf-badge">PDF</span><h3>لائحة المشتريات</h3><p>لائحة تنظيم المشتريات.</p></a>
+                    <a class="document-card" data-category="regulations volunteers" href="../assets/pdf/لائحة الموارد البشرية.pdf" download><span class="pdf-badge">PDF</span><h3>لائحة الموارد البشرية</h3><p>لائحة شؤون العاملين والموارد البشرية.</p></a>
+                    <a class="document-card" data-category="regulations executive" href="../assets/pdf/لائحة_تنظيم_عمل_المسؤول_التنفيذي_وآلية_تعيينه_وتحديد_شؤونه.pdf" download><span class="pdf-badge">PDF</span><h3>لائحة تنظيم عمل المسؤول التنفيذي</h3><p>اللائحة الخاصة بالإدارة التنفيذية.</p></a>
+                  </div>
+                </article>
+        <article class="portal-section detail-panel" id="policies" data-governance-section="policies">
+                  <div class="portal-section-head">
+                    <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+                    <div><h2>السياسات</h2><p>جميع السياسات الرسمية داخل بطاقات واضحة قابلة للبحث.</p></div>
+                  </div>
+                  <div class="document-card-grid">
+                    <a class="document-card" data-category="policies" href="../assets/pdf/سياسة_الإبلاغ_عن_المخالفات_وحماية_مقدمي_البلاغات_docx.pdf" download><span class="pdf-badge">PDF</span><h3>سياسة الإبلاغ عن المخالفات وحماية مقدمي البلاغات</h3><p>سياسة البلاغات والضمانات.</p></a>
+                    <a class="document-card" data-category="policies" href="../assets/pdf/سياسة تعارض المصالح .pdf" download><span class="pdf-badge">PDF</span><h3>سياسة تعارض المصالح</h3><p>تنظيم حالات تعارض المصالح.</p></a>
+                    <a class="document-card" data-category="policies" href="../assets/pdf/سياسة جمع التبرعات.pdf" download><span class="pdf-badge">PDF</span><h3>سياسة جمع التبرعات</h3><p>ضوابط جمع التبرعات.</p></a>
+                    <a class="document-card" data-category="policies" href="../assets/pdf/سياسة صرف المساعدات.pdf" download><span class="pdf-badge">PDF</span><h3>سياسة صرف المساعدات</h3><p>ضوابط صرف المساعدات.</p></a>
+                    <a class="document-card" data-category="policies" href="../assets/pdf/سياسة خصوصية البيانات .pdf" download><span class="pdf-badge">PDF</span><h3>سياسة خصوصية البيانات</h3><p>حماية وخصوصية البيانات.</p></a>
+                    <a class="document-card" data-category="policies" href="../assets/pdf/سياسة_الاحتفاظ_بالوثائق_واتلافها.pdf" download><span class="pdf-badge">PDF</span><h3>سياسة الاحتفاظ بالوثائق وإتلافها</h3><p>إدارة الوثائق وحفظها وإتلافها.</p></a>
+                    <a class="document-card" data-category="policies volunteers" href="../assets/pdf/سياسة_التطوع_لجمعية_رواد_اعمال_docx.pdf" download><span class="pdf-badge">PDF</span><h3>سياسة التطوع لجمعية رواد أعمال</h3><p>تنظيم العمل التطوعي.</p></a>
+                    <a class="document-card" data-category="policies guides" href="../assets/pdf/سياسة_الاشتباه_في_عمليات_غسيل_الأموال_وتمويل_الإرهاب.pdf" download><span class="pdf-badge">PDF</span><h3>سياسة الاشتباه في عمليات غسيل الأموال وتمويل الإرهاب</h3><p>مؤشرات الاشتباه والامتثال.</p></a>
+                    <a class="document-card" data-category="policies guides" href="../assets/pdf/سياسة_الوقاية_من_عمليات_غسيل_الأموال_وتمويل_الإرهاب.pdf" download><span class="pdf-badge">PDF</span><h3>سياسة الوقاية من غسيل الأموال وتمويل الإرهاب</h3><p>إطار الوقاية وتقليل المخاطر.</p></a>
+                  </div>
+                </article>
+        <article class="portal-section detail-panel" id="guides" data-governance-section="guides">
+                  <div class="portal-section-head">
+                    <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 20h9"/><path d="M12 4h9"/><path d="M4 9h16"/><path d="M4 15h16"/></svg></span>
+                    <div><h2>الأدلة وتقييم المخاطر</h2><p>الأدلة المرتبطة بالامتثال والمخاطر وبرامج التوعية.</p></div>
+                  </div>
+                  <div class="document-card-grid">
+                    <a class="document-card" data-category="guides" href="../assets/pdf/دليل_إجراءات_الإبلاغ_عن_الاشتباه_في_عمليات_غسل_الأموال_وتمويل.pdf" download><span class="pdf-badge">PDF</span><h3>دليل إجراءات الإبلاغ عن الاشتباه</h3><p>دليل الإبلاغ عن الاشتباه في غسل الأموال وتمويل الإرهاب.</p></a>
+                    <a class="document-card" data-category="guides" href="../assets/pdf/23ــ_تقييم_المخاطر_المتأصلة_والكامنة_في_الجمعية.pdf" download><span class="pdf-badge">PDF</span><h3>تقييم المخاطر المتأصلة والكامنة</h3><p>تقييم المخاطر الخاصة بالجمعية.</p></a>
+                    <a class="document-card" data-category="guides" href="../assets/pdf/تقرير_البرنامج_التوعوي_لرفع_الوعي_1_signed.pdf" download><span class="pdf-badge">PDF</span><h3>تقرير البرنامج التوعوي لرفع الوعي</h3><p>تقرير البرنامج التوعوي المعتمد.</p></a>
+                  </div>
+                </article>
+        <article class="portal-section detail-panel" id="volunteers" data-governance-section="volunteers">
+                  <div class="portal-section-head">
+                    <span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+                    <div><h2>المتطوعون والموارد البشرية</h2><p>كل ما يخص إدارة المتطوعين والموارد البشرية.</p></div>
+                  </div>
+                  <div class="document-card-grid">
+                    <a class="document-card" data-category="volunteers" href="../assets/pdf/آلية إدارة المتطوعين.pdf" download><span class="pdf-badge">PDF</span><h3>آلية إدارة المتطوعين</h3><p>آلية التسجيل والإدارة والسلامة.</p></a>
+                    <a class="document-card" data-category="volunteers policies" href="../assets/pdf/سياسة_التطوع_لجمعية_رواد_اعمال_docx.pdf" download><span class="pdf-badge">PDF</span><h3>سياسة التطوع</h3><p>سياسة تنظيم العمل التطوعي.</p></a>
+                    <a class="document-card" data-category="volunteers regulations" href="../assets/pdf/لائحة الموارد البشرية.pdf" download><span class="pdf-badge">PDF</span><h3>لائحة الموارد البشرية</h3><p>اللائحة الخاصة بالموارد البشرية.</p></a>
+                  </div>
+                </article>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><p class="copyright">بوابة الحوكمة والشفافية</p><a href="index.html">الرئيسية</a></div></div></footer>
+</body>
+</html>
