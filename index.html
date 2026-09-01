@@ -1688,18 +1688,25 @@ svg {
 <header class="site-header">
   <div class="container navbar">
     <a href="#" class="brand">
-     
-  <span class="brand-mark">
-<img src="assets/images/log.jpg" alt="شعار الجمعية" style="width: 50px; height: 60px; object-fit: contain;margin-left:20px;">  </span>
-
-جمعية رواد اعمال المدينة|رياديون        
+      <span class="brand-mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v2h18V7L12 2Z"/><path d="M5 11v8"/><path d="M9 11v8"/><path d="M15 11v8"/><path d="M19 11v8"/><path d="M3 21h18"/></svg>
+      </span>
+      جمعية رواد أعمال المدينة | رياديون
     </a>
     <nav class="nav-links">
       <a href="#" aria-current="page">الرئيسية</a>
-        <a href="about.html">عن الجمعية</a>
-          <a href="#programs">المركز الأعلامي</a>
-          <a href="memberships.html">عضويات الجمعية</a>
-</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button">عن الجمعية</button>
+        <div class="nav-dropdown-menu">
+          <a href="#about">عن الجمعية</a>
+          <a href="#programs">برامج الجمعية</a>
+          <a href="#membership">عضويات الجمعية</a>
+          <a href="#trainers">استقطاب المدربين</a>
+          <a href="trainer-form.html">نموذج المدربين والمستشارين</a>
+          <a href="volunteer-form.html">نموذج التطوع</a>
+          <a href="#contact">تواصل معنا</a>
+        </div>
+      </div>
       <div class="nav-dropdown">
         <button class="nav-dropdown-toggle" type="button">الحوكمة واللوائح</button>
         <div class="nav-dropdown-menu">
@@ -1717,35 +1724,49 @@ svg {
           <a href="guides-forms/index.html">الأدلة والنماذج</a>
         </div>
       </div>
-
-<div class="nav-dropdown">
- <button class="nav-dropdown-toggle" type="button"> تواصل معنا </button>
-        <div class="nav-dropdown-menu">
-
-          <a href="employment.html">التوظيف</a>
-          <a href="contact-us.html">تواصل معنا</a>
-      </div>
-
-      </div>
     </nav>
   </div>
 </header>
 
-
+<!-- ========================= Messages Banner ========================= -->
+<div class="messages-banner">
+  <div class="messages-badge">
+    <span class="messages-badge-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a2 2 0 0 0 2 2h1l3 5 1-5h3l6 4V6l-6 4H9L6 6H5a2 2 0 0 0-2 2Z"/><path d="M21 9v6"/></svg>
+    </span>
+    <span>رسائل الجمعية</span>
+  </div>
+  <div class="messages-scroll-area">
+  <div class="messages-track messages-static">
+    <span class="message-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+      المرجع الريادي الأول في تمكين منظومة ريادة الأعمال بالمدينة المنورة
+    </span>
+    <span class="message-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 11-13h-8l1-7Z"/></svg>
+      من الفكرة إلى مشروع مستدام يصنع الأثر
+    </span>
+  </div>
+  </div>
+</div>
 
 <!-- ========================= Hero / About ========================= -->
 <section class="hero" id="about">
   <div class="container">
     <div class="intro-split">
       <div class="intro-media">
-   <img src="assets/images/logg.jpg" alt="ورشة عمل لجمعية رواد أعمال المدينة المنورة">
+        <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQwIDUyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3MkY2RSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYjIwNTAiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9Imdsb3ciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYyRDFCQyIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzYyRDFCQyIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjUyMCIgZmlsbD0idXJsKCNiZykiLz4KICA8Y2lyY2xlIGN4PSI1MjAiIGN5PSI4MCIgcj0iMTgwIiBmaWxsPSJ1cmwoI2dsb3cpIi8+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI0NzAiIHI9IjE0MCIgZmlsbD0idXJsKCNnbG93KSIgb3BhY2l0eT0iMC42Ii8+CgogIDwhLS0gc2NyZWVuIC0tPgogIDxyZWN0IHg9IjcwIiB5PSI5MCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSIyNzAiIHJ4PSIxNCIgZmlsbD0iIzBmMTQ0MCIgc3Ryb2tlPSIjNjJEMUJDIiBzdHJva2Utb3BhY2l0eT0iMC4zNSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHJlY3QgeD0iOTYiIHk9IjExNiIgd2lkdGg9IjIyMCIgaGVpZ2h0PSIxNTAiIHJ4PSI4IiBmaWxsPSIjMTgyMDU4Ii8+CiAgPGNpcmNsZSBjeD0iMTYwIiBjeT0iMTUwIiByPSIyMCIgZmlsbD0iIzYyRDFCQyIvPgogIDxyZWN0IHg9IjExMiIgeT0iMTg0IiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjEwIiByeD0iNSIgZmlsbD0iIzNiNDM3ZiIvPgogIDxyZWN0IHg9IjExMiIgeT0iMjA0IiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjEwIiByeD0iNSIgZmlsbD0iIzNiNDM3ZiIvPgogIDxyZWN0IHg9IjExMiIgeT0iMjI0IiB3aWR0aD0iMTMwIiBoZWlnaHQ9IjEwIiByeD0iNSIgZmlsbD0iIzNiNDM3ZiIvPgoKICA8cmVjdCB4PSIzNDAiIHk9IjExNiIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxNTAiIHJ4PSI4IiBmaWxsPSIjMTgyMDU4Ii8+CiAgPHBhdGggZD0iTTM2MCAyNDAgTDQwMCAxOTAgTDQzMCAyMTUgTDQ3MCAxNjAgTDUyMCAyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzYyRDFCQyIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI0MDAiIGN5PSIxOTAiIHI9IjUiIGZpbGw9IiM2MkQxQkMiLz4KICA8Y2lyY2xlIGN4PSI0MzAiIGN5PSIyMTUiIHI9IjUiIGZpbGw9IiM2MkQxQkMiLz4KICA8Y2lyY2xlIGN4PSI0NzAiIGN5PSIxNjAiIHI9IjUiIGZpbGw9IiM2MkQxQkMiLz4KICA8Y2lyY2xlIGN4PSI1MjAiIGN5PSIyMDAiIHI9IjUiIGZpbGw9IiM2MkQxQkMiLz4KCiAgPCEtLSBhdWRpZW5jZSBzaWxob3VldHRlcyAtLT4KICA8ZyBmaWxsPSIjMGYxNDQwIj4KICAgIDxlbGxpcHNlIGN4PSIxNTAiIGN5PSI0NDAiIHJ4PSI0NiIgcnk9IjU4Ii8+CiAgICA8Y2lyY2xlIGN4PSIxNTAiIGN5PSIzOTIiIHI9IjI2Ii8+CiAgICA8ZWxsaXBzZSBjeD0iMjYwIiBjeT0iNDUwIiByeD0iNTAiIHJ5PSI2MiIvPgogICAgPGNpcmNsZSBjeD0iMjYwIiBjeT0iNDAwIiByPSIyOCIvPgogICAgPGVsbGlwc2UgY3g9IjM5MCIgY3k9IjQ1MiIgcng9IjUyIiByeT0iNjQiLz4KICAgIDxjaXJjbGUgY3g9IjM5MCIgY3k9IjQwMCIgcj0iMjkiLz4KICAgIDxlbGxpcHNlIGN4PSI1MDAiIGN5PSI0NDUiIHJ4PSI0NiIgcnk9IjU4Ii8+CiAgICA8Y2lyY2xlIGN4PSI1MDAiIGN5PSIzOTYiIHI9IjI2Ii8+CiAgPC9nPgoKICA8IS0tIHByZXNlbnRlciAtLT4KICA8ZyBmaWxsPSIjRjdGOUZDIj4KICAgIDxlbGxpcHNlIGN4PSI1OTAiIGN5PSIzMzAiIHJ4PSIzNCIgcnk9IjcwIi8+CiAgICA8Y2lyY2xlIGN4PSI1OTAiIGN5PSIyNTgiIHI9IjIyIi8+CiAgPC9nPgo8L3N2Zz4K" alt="ورشة عمل لجمعية رواد أعمال المدينة المنورة">
       </div>
       <div class="intro-text">
         <p>
-         جمعية رواد أعمال المدينة المنورة لتطوير الأعمال من خلال تقديم الخدمات والاستشارات والدراسات والورش الإرشادية لأصحاب الأعمال بمختلف مستوياتهم، لتطوير الأعمال ونموها في المدينة المنورة.
+          انطلاقًا من المكانة التنموية والاقتصادية للمدينة المنورة، تأسست جمعية رواد
+          أعمال المدينة المنورة لتمكين أصحاب الأفكار والمشاريع الناشئة، وتنمية قدراتهم،
+          وربطهم بالفرص والممكنات التي تساعدهم على تأسيس مشاريع مستدامة وقابلة للنمو.
         </p>
         <p>
-          كما نسعى إلى تنمية المنشآت عبر التطوير المادي والمعنوي، وتحسين نماذج الأعمال التشغيلية والاستشارية للوصول إلى حالة التميز.
+          تؤمن الجمعية بأن ريادة الأعمال أداة فاعلة لصناعة الأثر وتنمية الاقتصاد وخلق
+          الفرص، وتسعى من خلال برامجها ومبادراتها وشراكاتها إلى بناء مجتمع ريادي محفز،
+          تتحول فيه الأفكار الواعدة إلى مشاريع تسهم في ازدهار المدينة المنورة وتنميتها.
         </p>
       </div>
     </div>
@@ -1961,20 +1982,19 @@ svg {
         <nav>
           <a href="#">المملكة العربية السعودية، المدينة المنورة</a>
           <a href="#">info@entrepreneurs.sa</a>
-          <a href="#"></a>
+          <a href="#">مسجلة برقم 5242 لدى المركز الوطني لتنمية القطاع غير الربحي</a>
         </nav>
       </div>
 
       <div class="footer-column">
         <h2>روابط الموقع</h2>
         <nav>
-          <a href="about.html">عن الجمعية</a>
+          <a href="#about">عن الجمعية</a>
           <a href="#programs">برامج الجمعية</a>
-          <a href="memberships.html">عضويات الجمعية</a>
+          <a href="#membership">عضويات الجمعية</a>
           <a href="#trainers">استقطاب المدربين</a>
+          <a href="trainer-form.html">نموذج المدربين والمستشارين</a>
           <a href="volunteer-form.html">نموذج التطوع</a>
-          <a href="employment.html">التوظيف</a>
-          <a href="contact-us.html">تواصل معنا</a>
         </nav>
       </div>
 
@@ -2256,21 +2276,8 @@ svg {
     }, 250);
   }
 
- if (openBtn) {
+  if (openBtn) {
     openBtn.addEventListener('click', openModal);
-  }
-
-  // زر "انضموا إلينا" في الهيدر (يُحقن لاحقاً عبر page-links.js)
-  document.addEventListener('click', function (e) {
-    var link = e.target.closest('.join-us-link');
-    if (!link) return;
-    e.preventDefault();
-    openModal();
-  });
-
-  // فتح المودال تلقائياً عند القدوم من صفحة أخرى بالرابط index.html#join-us
-  if (window.location.hash === '#join-us') {
-    openModal();
   }
   if (closeBtn) {
     closeBtn.addEventListener('click', closeModal);
@@ -2320,7 +2327,6 @@ svg {
 })();
 </script>
 
-<script src="assets/js/page-links.js"></script>
 </body>
 </html>
 
