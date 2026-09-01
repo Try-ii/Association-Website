@@ -1,14 +1,14 @@
-﻿# Association Website - Portfolio Project
+# Association Website - Portfolio Project
 
 A responsive web application and governance portal built with pure HTML, CSS, and vanilla JavaScript for showcasing front-end development, interactive filtering/search, and document management interfaces.
 
 ## Project Structure
 
-- index.html - Main landing page with interactive join forms and partner showcases.
-- 	rainer-form.html & olunteer-form.html - Dedicated onboarding and application forms.
-- governance/ - Comprehensive transparency & governance portal with real-time category filtering and search.
-- guides-forms/ - Operational guides, templates, and download center prototype.
-- ssets/ - Stylesheets (style.css), JavaScript (search.js), media assets, and sample demonstration documents.
+- `index.html` - Main landing page with interactive join forms and partner showcases.
+- `trainer-form.html` & `volunteer-form.html` - Dedicated onboarding and application forms.
+- `governance/` - Comprehensive transparency & governance portal with real-time category filtering and search.
+- `guides-forms/` - Operational guides, templates, and download center prototype.
+- `assets/` - Stylesheets (`style.css`), JavaScript (`search.js`), media assets, and sample demonstration documents.
 
 ## Key Features
 
